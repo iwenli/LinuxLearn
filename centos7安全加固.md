@@ -36,5 +36,3 @@
     yum install -y wget && wget -O install.sh http://download.bt.cn/install/install.sh && sh install.sh
     ```
     > 参考：https://www.bt.cn/bbs/thread-1186-1-1.html
-
-7.  
