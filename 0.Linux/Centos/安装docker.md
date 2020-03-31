@@ -1,6 +1,9 @@
-# 腾讯云服务centos7.x 安装docker
-
+# 安装docker
 > 参考：http://www.cnblogs.com/stulzq/p/7743073.html
+
+## 阿里云安装docker
+>  https://help.aliyun.com/document_detail/51853.html?spm=5176.13329450.0.0.7c724df51eutY4
+
 
 ## 卸载旧版本
 ---
@@ -52,3 +55,6 @@ docker-engine
     ```
     sudo yum install docker-ce
     ```
+
+5.  使用 DockerHub 加速器
+    https://cloud.tencent.com/document/product/457/9113
