@@ -58,3 +58,14 @@ docker run \
 registry.cn-beijing.aliyuncs.com/net5/aspnetcore:3.1 \
 dotnet 'Iwenli.IdentityServer4.Admin.dll'
 ```
+
+##### api
+``` shell
+docker run \
+--name api  \
+-itd \
+-p 1050:80 \
+-v /usr/site/docker/api/site/:/app \
+registry.cn-beijing.aliyuncs.com/net5/aspnetcore:3.1 \
+dotnet 'Iwenli.IdentityServer4.Admin.dll'
+```
