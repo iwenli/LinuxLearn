@@ -64,8 +64,8 @@ dotnet 'Iwenli.IdentityServer4.Admin.dll'
 docker run \
 --name api  \
 -itd \
--p 1050:80 \
+-p 1060:80 \
 -v /usr/site/docker/api/site/:/app \
-registry.cn-beijing.aliyuncs.com/net5/aspnetcore:3.1 \
-dotnet 'Iwenli.IdentityServer4.Admin.dll'
+registry.cn-beijing.aliyuncs.com/net5/aspnetcore:5.0 \
+dotnet 'Coldairarrow.Api.dll'
 ```
