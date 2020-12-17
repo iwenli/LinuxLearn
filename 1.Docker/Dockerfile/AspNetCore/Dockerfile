@@ -26,5 +26,9 @@ RUN apt-get update \
         libx11-dev \
      && rm -rf /var/lib/apt/lists/*
 
+ENV ASPNETCORE_URLS=http://+:80 \
+    # Enable detection of running in a container
+    DOTNET_RUNNING_IN_CONTAINER=true
+    
 # 设置工作目录
 WORKDIR /app
