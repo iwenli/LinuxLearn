@@ -3,6 +3,7 @@
 #### 使用通用镜像部署
 ``` shell
 docker run \
+--restart=always \
 --name app  \
 -dit \
 --rm \
@@ -15,6 +16,7 @@ dotnet 'aspnetapp.dll'
 ##### blog.email
 ``` shell
 docker run \
+--restart=always \
 --name blog.email  \
 -dit \
 -p 1040:80 \
@@ -26,6 +28,7 @@ dotnet 'Moonglade.Notification.API.dll'
 ##### blog
 ``` shell
 docker run \
+--restart=always \
 --name blog  \
 -dit \
 -p 1041:80 \
@@ -39,6 +42,7 @@ dotnet 'Moonglade.Web.dll'
 ##### passport
 ``` shell
 docker run \
+--restart=always \
 --name passport  \
 -itd \
 -p 1051:443 \
@@ -51,6 +55,7 @@ dotnet 'Iwenli.IdentityServer4.STS.Identity.dll'
 ##### ids
 ``` shell
 docker run \
+--restart=always \
 --name ids  \
 -itd \
 -p 1050:80 \
@@ -62,6 +67,7 @@ dotnet 'Iwenli.IdentityServer4.Admin.dll'
 ##### api
 ``` shell
 docker run \
+--restart=always \
 --name api  \
 -itd \
 -p 1060:80 \
