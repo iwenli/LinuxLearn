@@ -75,3 +75,16 @@ docker run \
 registry.cn-beijing.aliyuncs.com/net5/aspnetcore:5.0 \
 dotnet 'Coldairarrow.Api.dll'
 ```
+
+
+##### api
+``` shell
+docker run \
+--restart=always \
+--name wenlis-check  \
+-itd \
+-p 1051:80 \
+-v /usr/site/docker/wenlis/check/site/:/app \
+registry.cn-beijing.aliyuncs.com/net5/aspnetcore:5.0.7 \
+dotnet 'Dotnet5Check.API.dll'
+```

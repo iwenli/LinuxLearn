@@ -19,11 +19,14 @@ RUN /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shang
 
 # 安装System.Drawing本机依赖项
 # https://github.com/dotnet/dotnet-docker/issues/618
+# 安装中文字体  用于验证码  [文泉驿正黑]
 RUN apt-get update \
     && apt-get install -y --allow-unauthenticated \
         libc6-dev \
         libgdiplus \
         libx11-dev \
+        fontconfig \
+        fonts-wqy-zenhei \
      && rm -rf /var/lib/apt/lists/*
 
 ENV ASPNETCORE_URLS=http://+:80 \
