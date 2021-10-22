@@ -58,3 +58,9 @@ docker-engine
 
 5.  使用 DockerHub 加速器
     https://cloud.tencent.com/document/product/457/9113
+    
+
+6.  添加守护进程
+    ```
+    systemctl enable docker
+    ```

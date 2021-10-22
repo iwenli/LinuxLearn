@@ -26,6 +26,7 @@ RUN apt-get update \
         libgdiplus \
         libx11-dev \
         fontconfig \
+        fontconfig \
         fonts-wqy-zenhei \
      && rm -rf /var/lib/apt/lists/*
 
