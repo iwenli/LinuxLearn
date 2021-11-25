@@ -2,7 +2,7 @@
 > 参考：http://www.cnblogs.com/stulzq/p/7743073.html
 
 ## 阿里云安装docker
->  https://help.aliyun.com/document_detail/51853.html?spm=5176.13329450.0.0.7c724df51eutY4
+>  https://help.aliyun.com/document_detail/187598.html?spm=5176.22414175.sslink.1.26d4f0deM6HhGA
 
 
 ## 卸载旧版本
