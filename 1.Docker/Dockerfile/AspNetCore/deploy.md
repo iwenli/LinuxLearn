@@ -19,8 +19,8 @@ docker run \
 --restart=always \
 --name blog.email  \
 -dit \
--p 1040:80 \
--v /usr/site/docker/blog.email/site/:/app \
+-p 2040:80 \
+-v /usr/site/docker/wenlis/blog.email/site/:/app \
 registry.cn-beijing.aliyuncs.com/net5/aspnetcore:3.1 \
 dotnet 'Moonglade.Notification.API.dll'
 ```
@@ -31,9 +31,9 @@ docker run \
 --restart=always \
 --name blog  \
 -dit \
--p 1041:80 \
--v /usr/site/docker/blog/site/:/app \
--v /usr/site/docker/blog/tmp/:/tmp/moonglade \
+-p 2041:80 \
+-v /usr/site/docker/wenlis/blog/site/:/app \
+-v /usr/site/docker/wenlis/blog/tmp/:/tmp/moonglade \
 registry.cn-beijing.aliyuncs.com/net5/aspnetcore:3.1 \
 dotnet 'Moonglade.Web.dll'
 ```
@@ -45,8 +45,8 @@ docker run \
 --restart=always \
 --name passport  \
 -itd \
--p 1051:443 \
--v /usr/site/docker/passport/site/:/app \
+-p 2051:443 \
+-v /usr/site/docker/wenlis/passport/site/:/app \
 registry.cn-beijing.aliyuncs.com/net5/aspnetcore:3.1 \
 dotnet 'Iwenli.IdentityServer4.STS.Identity.dll'
 ```
@@ -58,8 +58,8 @@ docker run \
 --restart=always \
 --name ids  \
 -itd \
--p 1050:80 \
--v /usr/site/docker/ids/site/:/app \
+-p 2050:80 \
+-v /usr/site/docker/wenlis/ids/site/:/app \
 registry.cn-beijing.aliyuncs.com/net5/aspnetcore:3.1 \
 dotnet 'Iwenli.IdentityServer4.Admin.dll'
 ```
