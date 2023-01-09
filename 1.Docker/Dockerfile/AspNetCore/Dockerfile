@@ -16,7 +16,7 @@ LABEL description="AspNetCore公共运行容器，通过挂载app目录和entryp
 
 # 设置时区
 RUN unlink /etc/localtime \
-ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+&& ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 # 安装System.Drawing本机依赖项
 # https://github.com/dotnet/dotnet-docker/issues/618
