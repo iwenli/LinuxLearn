@@ -15,7 +15,8 @@ LABEL description="AspNetCore公共运行容器，通过挂载app目录和entryp
 # RUN openssl pkcs12 -export -out server.pfx -inkey server.key -in server.crt -certfile server.crt -passout pass:${CertPassword}
 
 # 设置时区
-RUN /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' >/etc/timezone
+unlink /etc/localtime
+ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 # 安装System.Drawing本机依赖项
 # https://github.com/dotnet/dotnet-docker/issues/618
