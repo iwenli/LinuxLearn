@@ -24,9 +24,8 @@ RUN unlink /etc/localtime \
 # 安装System.Drawing本机依赖项
 # https://github.com/dotnet/dotnet-docker/issues/618
 # 安装中文字体  用于验证码  [文泉驿正黑]
-# apt-get update &&  \ 
-    
-RUN apt-get install -y --allow-unauthenticated \
+RUN apt-get update &&  \ 
+        apt-get install -y --allow-unauthenticated \
         libc6-dev \
         libgdiplus \
         libx11-dev \
