@@ -18,9 +18,12 @@ LABEL description="AspNetCore公共运行容器，通过挂载app目录和entryp
 RUN unlink /etc/localtime \
 && ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
+# .net 8.0 build 异常 https://unix.stackexchange.com/questions/75807/no-public-key-available-on-apt-get-update
+RUN apt-get install debian-archive-keyring && apt-key update
 # 安装System.Drawing本机依赖项
 # https://github.com/dotnet/dotnet-docker/issues/618
 # 安装中文字体  用于验证码  [文泉驿正黑]
+
 RUN apt-get update \
     && apt-get install -y --allow-unauthenticated \
         libc6-dev \
